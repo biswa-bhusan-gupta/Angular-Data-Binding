@@ -1,0 +1,47 @@
+<p [style.color]="'grey'">
+  {{name.toUpperCase()}} : {{roll}} => {{getUniversity().length}}
+</p>
+
+<p [style.color]="setColor" [innerText]="class"></p>
+<p [ngStyle]="setColors">Hello World</p>
+
+<button (click)="myName='My Name is Biswa Bhusan Gupta'">My Name</button>
+<p>{{myName}}</p>
+
+<h3 [class]="coClass">Message Log</h3>
+<input #myInput type="text" />
+<br /><br />
+<button (click)="logMessage(myInput)">Log a Message</button>
+<p>{{message}}</p>
+
+<h3 [class]="coClass">Server Name</h3>
+<label>Input : </label>
+<input type="text" (input)="onInput($event)" /><br /><br />
+
+<button
+  class="btn btn-primary"
+  [disabled]="allowServer"
+  (click)="onClick($event)"
+>
+  Click Message
+</button>
+
+<br /><br />
+
+<p>{{infoStatus}}</p>
+
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<!-- TRIGGER INPUT EVENT AND UPDATES VALUE OF SERVER NAME -->
+<p [style.color]="hasError?'orange':'grey'">{{serverName}}</p>
+
+<br />
+<br />
+<br />
+
+<h2>Username</h2>
+<input type="text" [(ngModel)]="username" /><br /><br />
+<p>{{username}}</p>
+<!-- <button class="btn btn-primary" [disabled]="username===''" (click)="username=''">Reset User</button> -->
+<button class="btn btn-primary" [disabled]="username===''" (click)="onUser()">
+  Reset User
+</button>

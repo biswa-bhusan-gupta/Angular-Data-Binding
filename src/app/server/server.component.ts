@@ -20,9 +20,9 @@ export class ServerComponent {
 
   message = ""; // TEMPLATE REFERENCE VARIABLE
   logMessage(input) {
-    console.log(input);
-    console.log(input.type);
-    console.log(input.value);
+    // console.log(input);
+    // console.log(input.type);
+    // console.log(input.value);
     this.message = input.value;
   }
 
@@ -47,10 +47,10 @@ export class ServerComponent {
 
   onInput(event) {
     // updateServerName(event: Event) {
-    console.log(event);
-    console.log(event.type); // --> INPUT
-    console.log(event.target.type); // --> TEXT
-    console.log(event.target.value); // --> VALUE
+    // console.log(event);
+    // console.log(event.type); // --> INPUT
+    // console.log(event.target.type); // --> TEXT
+    // console.log(event.target.value); // --> VALUE
     this.serverName = (<HTMLInputElement>event.target).value;
   }
   // EXERCISE :
